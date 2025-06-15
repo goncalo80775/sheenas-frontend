@@ -13,7 +13,7 @@ const Footer = () => {
         <p className="text-[#FDF0D5]/80 mt-2">
           Open source, like all good things:{" "}
           <a
-            href="https://github.com/your-username/your-repo"
+            href="https://github.com/goncalo80775/sheenas-frontend"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#669BBC] hover:text-[#C1121F] transition-colors duration-300 font-medium underline"

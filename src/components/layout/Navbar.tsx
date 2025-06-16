@@ -29,6 +29,13 @@ const Navbar = () => {
             FAQ
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C1121F] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
           </a>
+          <a
+            href="#contact"
+            className="text-[#003049]/80 font-medium hover:text-[#003049] transition-colors relative group"
+          >
+            Contact
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C1121F] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+          </a>
         </div>
         <div className="flex gap-4">
           <a

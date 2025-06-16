@@ -102,12 +102,25 @@ const FaqSection = () => {
     <>
       <section id="faq" className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-4 mb-12">
-            <div className="h-px flex-grow bg-gradient-to-r from-[#FDF0D5] to-[#003049]/20"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#003049] flex items-center gap-3">
-              <span className="text-[#C1121F]">/</span> Random Facts I Find Cool
-            </h2>
-            <div className="h-px flex-grow bg-gradient-to-l from-[#FDF0D5] to-[#003049]/20"></div>
+          <div className="text-center mb-16">
+            <div
+              className={`transform transition-all duration-1000 ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
+              }`}
+            >
+              <h2 className="text-5xl md:text-6xl font-black text-[#003049] mb-4 relative">
+                <span className="bg-gradient-to-r from-[#C1121F] to-[#780000] bg-clip-text text-transparent">
+                  FA
+                </span>
+                Q
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-[#C1121F] to-[#780000] rounded-full"></div>
+              </h2>
+              <p className="text-[#003049]">
+                Not the normal FAQ, more like random facts
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

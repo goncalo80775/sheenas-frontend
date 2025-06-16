@@ -33,6 +33,7 @@ const SkillsSection = () => {
     { name: "Java", icon: "/assets/skills/Java.svg" },
     { name: "Spring", icon: "/assets/skills/Spring.svg" },
     { name: "Maven", icon: "/assets/skills/Maven.svg" },
+    { name: "Kafka", icon: "/assets/skills/Kafka.svg" },
     { name: "Tailwind CSS", icon: "/assets/skills/Tailwindcss.svg" },
     { name: "SQL", icon: "/assets/skills/SQL.svg" },
     { name: "Docker", icon: "/assets/skills/Docker.svg" },

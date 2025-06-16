@@ -234,9 +234,9 @@ const AboutSection = () => {
                       "Why not put them online and access them from anywhere?"
                     </blockquote>
                     <p>
-                      So here we are—a little landing page for my new domain,
+                      So here we are, a little landing page for my new domain,
                       born from one of those nerdy ideas I mentioned above.
-                      Welcome to my digital playground! 🚀
+                      Welcome to my digital playground!
                     </p>
                   </div>
                 </div>

@@ -57,14 +57,14 @@ const FaqSection = () => {
     {
       question: "How is this website even online?",
       answer:
-        "I coded everything in React on my personal PC, built a Docker image, and exported it to an old computer I had lying around. That machine now runs this and a bunch of other containers.\n\nTo actually make it accessible online, I use cloudflared to create a tunnel from the outside world into my local network. Then I use Nginx to handle the routing and reverse proxying—basically, it makes sure that when you hit the domain, the request ends up in the right container.",
+        "I coded everything in React on my personal PC, built a Docker image, and exported it to an old computer I had lying around. That machine now runs this and a bunch of other containers.\n\nTo actually make it accessible online, I use cloudflared to create a tunnel from the outside world into my local network. Then I use Nginx to handle the routing and reverse proxying. Basically, it makes sure that when you hit the domain, the request ends up in the right container.",
       icon: "🤔",
       style: "light",
     },
     {
       question: "My setup",
       answer:
-        "For years, I dreamed of building my own PC from scratch—and eventually, I made it happen. The setup is constantly evolving as I get new ideas or find inspiration online.\n\nWhat started as a simple desire to play games has evolved into a full workstation where I code, design, game, and occasionally pretend I'm a streamer when nobody's watching.\n\n**Current Build Specs:**\n\n**CPU:** AMD Ryzen 5 7500F 3.7 GHz 6-Core Processor\n**CPU Cooler:** Thermalright Aqua Elite V3 66.17 CFM Liquid CPU Cooler\n**Motherboard:** MSI PRO B650M-P Micro ATX AM5 Motherboard\n**Memory:** Corsair Vengeance RGB 32 GB (2 x 16 GB) DDR5-6000 CL30\n**Storage:** TEAMGROUP MP44L 1 TB M.2-2280 PCIe 4.0 X4 NVME SSD\n**Video Card:** XFX Core Edition Radeon RX 6750 XT 12 GB\n**Case:** Aerocool Viewport Mini V2 MicroATX Mini Tower Case\n**Power Supply:** Corsair RM750x White 750W 80+ Gold Certified Fully Modular\n\nThe RGB lighting changes based on my mood (or what game I'm playing), and I've got multiple monitors for productivity, a mechanical keyboard that sounds like pure satisfaction, and a mouse that's seen more action than most Netflix series.",
+        "For years, I dreamed of building my own PC from scratch and eventually, I made it happen. The setup is constantly evolving as I get new ideas or find inspiration online.\n\nWhat started as a simple desire to play games has evolved into a full workstation where I code, design, game, and occasionally pretend I'm a streamer when nobody's watching.\n\n**Current Build Specs:**\n\n**CPU:** AMD Ryzen 5 7500F 3.7 GHz 6-Core Processor\n**CPU Cooler:** Thermalright Aqua Elite V3 66.17 CFM Liquid CPU Cooler\n**Motherboard:** MSI PRO B650M-P Micro ATX AM5 Motherboard\n**Memory:** Corsair Vengeance RGB 32 GB (2 x 16 GB) DDR5-6000 CL30\n**Storage:** TEAMGROUP MP44L 1 TB M.2-2280 PCIe 4.0 X4 NVME SSD\n**Video Card:** XFX Core Edition Radeon RX 6750 XT 12 GB\n**Case:** Aerocool Viewport Mini V2 MicroATX Mini Tower Case\n**Power Supply:** Corsair RM750x White 750W 80+ Gold Certified Fully Modular\n\nThe RGB lighting changes based on my mood (or what game I'm playing), and I've got multiple monitors for productivity, a mechanical keyboard that sounds like pure satisfaction, and a mouse that's seen more action than most Netflix series.",
       hasImage: true,
       imageUrl: "/assets/setup.png",
       icon: "💻",
@@ -187,7 +187,7 @@ const FaqSection = () => {
                         >
                           <p>
                             For years, I dreamed of building my own PC from
-                            scratch—and eventually, I made it happen. The setup
+                            scratch and eventually, I made it happen. The setup
                             is constantly evolving as I get new ideas or find
                             inspiration online.
                           </p>
@@ -271,7 +271,7 @@ const FaqSection = () => {
               <div className="text-[#003049]/80 leading-relaxed text-lg">
                 <div className="space-y-6">
                   <p>
-                    For years, I dreamed of building my own PC from scratch—and
+                    For years, I dreamed of building my own PC from scratch and
                     eventually, I made it happen. The setup is constantly
                     evolving as I get new ideas or find inspiration online.
                   </p>

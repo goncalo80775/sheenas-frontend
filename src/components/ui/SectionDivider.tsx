@@ -1,11 +1,11 @@
-import React from "react";
+import type { FC } from "react";
 
 interface SectionDividerProps {
   isVisible?: boolean;
   delay?: number;
 }
 
-const SectionDivider: React.FC<SectionDividerProps> = ({
+const SectionDivider: FC<SectionDividerProps> = ({
   isVisible = true,
   delay = 0,
 }) => {
@@ -16,7 +16,7 @@ const SectionDivider: React.FC<SectionDividerProps> = ({
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-24 h-1 bg-gradient-to-r from-[#C1121F] via-[#669BBC] to-[#003049] rounded-full"></div>
+      <div className="w-24 h-1 bg-[#C1121F] dark:bg-[#669BBC] rounded-full transition-colors duration-300"></div>
     </div>
   );
 };

@@ -26,7 +26,7 @@ const ResumePage = () => {
         <a 
           href="/assets/Goncalo_Martins.pdf"
           download="Goncalo_Martins_Resume.pdf"
-          className="ml-4 bg-[#780000] text-[#FDF0D5] px-6 py-2 rounded-full font-medium hover:bg-[#C1121F] transition-colors duration-300"
+          className="ml-4 bg-[#780000] text-white dark:text-white px-6 py-2 rounded-full font-medium hover:bg-[#C1121F] transition-colors duration-300"
         >
           Download PDF
         </a>

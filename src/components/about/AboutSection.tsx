@@ -9,19 +9,19 @@ const AboutSection = () => {
   }, []);
 
   const personalityTags = [
-    { text: "Full-Stack Developer", color: "bg-[#C1121F]", icon: "💻" },
-    { text: "Music Festival Lover", color: "bg-[#669BBC]", icon: "🎵" },
-    { text: "Problem Solver", color: "bg-[#C1121F]", icon: "🧩" },
-    { text: "Tech Enthusiast", color: "bg-[#003049]", icon: "⚡" },
-    { text: "Gamer", color: "bg-[#780000]", icon: "🎮" },
+    { text: "Full-Stack Developer", icon: "💻" },
+    { text: "Music Festival Lover", icon: "🎵" },
+    { text: "Problem Solver", icon: "🧩" },
+    { text: "Tech Enthusiast", icon: "⚡" },
+    { text: "Gamer", icon: "🎮" },
   ];
 
   return (
-    <section id="about" className="py-20 px-6 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#C1121F]/5 rounded-full blur-3xl -translate-x-48 -translate-y-48"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#669BBC]/8 rounded-full blur-3xl translate-x-40 translate-y-40"></div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
+    <section
+      id="about"
+      className="py-20 px-6 bg-white dark:bg-gray-900 transition-colors duration-300"
+    >
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div
             className={`transform transition-all duration-1000 ${
@@ -30,17 +30,13 @@ const AboutSection = () => {
                 : "translate-y-8 opacity-0"
             }`}
           >
-            <h2 className="text-5xl md:text-6xl font-black text-[#003049] mb-4 relative">
-              <span className="bg-gradient-to-r from-[#C1121F] to-[#780000] bg-clip-text text-transparent">
-                About
-              </span>{" "}
-              Me
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-[#C1121F] to-[#780000] rounded-full"></div>
+            <h2 className="text-5xl md:text-6xl font-black text-[#003049] dark:text-white mb-4 relative">
+              <span className="text-[#C1121F]">About</span> Me
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#C1121F] rounded-full"></div>
             </h2>
           </div>
         </div>
 
-        {/* Main Content Grid */}
         <div className="grid lg:grid-cols-12 gap-8 items-start">
           {/* Left Side - Profile Card */}
           <div className="lg:col-span-5">
@@ -54,13 +50,12 @@ const AboutSection = () => {
             >
               <div>
                 <div className="relative mb-8">
-                  <div className="w-64 h-80 mx-auto bg-gradient-to-br from-[#003049] to-[#669BBC] rounded-2xl overflow-hidden relative shadow-xl">
+                  <div className="w-64 h-80 mx-auto bg-[#003049] dark:bg-gray-800 rounded-2xl overflow-hidden relative shadow-xl">
                     <img
                       src="/assets/personal.jpg"
                       alt="Gonçalo Martins"
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#003049]/60 to-transparent"></div>
                   </div>
                 </div>
 
@@ -77,7 +72,9 @@ const AboutSection = () => {
                       style={{ transitionDelay: `${index * 100 + 400}ms` }}
                     >
                       <div
-                        className={`${tag.color} text-[#FDF0D5] px-4 py-3 rounded-xl font-semibold text-sm shadow-lg transform hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-default flex items-center gap-3`}
+                        className={`${
+                          index % 2 === 0 ? "bg-[#003049]" : "bg-[#669BBC]"
+                        } text-white px-4 py-3 rounded-xl font-semibold text-sm shadow-lg transform hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-default flex items-center gap-3`}
                       >
                         <span className="text-lg">{tag.icon}</span>
                         {tag.text}
@@ -101,7 +98,7 @@ const AboutSection = () => {
                     href="/resume"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#003049] text-[#FDF0D5] px-6 py-4 rounded-2xl font-semibold text-center shadow-lg border-4 border-[#003049] transform hover:scale-105 hover:bg-[#669BBC] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3"
+                    className="bg-[#003049] dark:bg-[#669BBC] text-white px-6 py-4 rounded-2xl font-semibold text-center shadow-lg border-4 border-[#003049] dark:border-[#669BBC] transform hover:scale-105 hover:bg-[#C1121F] dark:hover:bg-[#C1121F] hover:border-[#C1121F] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3"
                   >
                     <svg
                       className="w-5 h-5"
@@ -131,33 +128,19 @@ const AboutSection = () => {
               }`}
               style={{ transitionDelay: "600ms" }}
             >
-              <div className="bg-gradient-to-br from-[#003049] to-[#003049]/90 text-[#FDF0D5] p-8 rounded-3xl shadow-2xl border border-[#669BBC]/20 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-[#669BBC]/10 rounded-full -translate-y-20 translate-x-20"></div>
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#C1121F]/10 rounded-full translate-y-16 -translate-x-16"></div>
-
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl">👋</span>
-                    <h3 className="text-3xl font-bold text-[#C1121F]">
-                      Hey there!
-                    </h3>
-                  </div>
-                  <div className="space-y-4 text-lg leading-relaxed">
-                    <p>
-                      I'm a software developer with a solid background in{" "}
-                      <span className="font-semibold text-[#669BBC]">Java</span>{" "}
-                      and{" "}
-                      <span className="font-semibold text-[#669BBC]">
-                        JavaScript
-                      </span>
-                      , but I'm always chasing new tech and fresh ideas.
-                    </p>
-                    <p>
-                      From fixing bugs to dreaming up new features, if it's
-                      challenging, I'm in. Let's build something amazing
-                      together!
-                    </p>
-                  </div>
+              <div className="bg-[#003049] dark:bg-gray-800 text-white p-8 rounded-3xl shadow-2xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="text-3xl">💼</span>
+                  <h3 className="text-3xl font-bold text-[#C1121F]">
+                    Professional Background
+                  </h3>
+                </div>
+                <div className="space-y-4 text-lg leading-relaxed">
+                  <p>
+                    Full-Stack Developer with 4+ years building scalable web
+                    applications. I work with React, TypeScript, Node.js, and
+                    Java Spring Boot on a daily basis.
+                  </p>
                 </div>
               </div>
             </div>
@@ -170,38 +153,21 @@ const AboutSection = () => {
               }`}
               style={{ transitionDelay: "800ms" }}
             >
-              <div className="bg-white/90 backdrop-blur-sm border-2 border-[#003049]/20 p-8 rounded-3xl shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#C1121F]/5 rounded-full -translate-y-16 translate-x-16"></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#669BBC]/10 rounded-full translate-y-12 -translate-x-12"></div>
-
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl">🎵</span>
-                    <h3 className="text-3xl font-bold text-[#003049]">
-                      When I'm Not Coding
-                    </h3>
-                  </div>
-                  <div className="space-y-4 text-lg text-[#003049]/80 leading-relaxed">
-                    <p>
-                      You'll probably find me at a bar with friends, at{" "}
-                      <span className="font-semibold text-[#C1121F]">
-                        Estádio da Luz
-                      </span>
-                      , or at home doing some classic nerd stuff.
-                    </p>
-                    <p>
-                      In the summer, I'm all about music festivals. Whether it's{" "}
-                      <span className="font-semibold text-[#780000]">
-                        Hip Hop
-                      </span>{" "}
-                      or{" "}
-                      <span className="font-semibold text-[#780000]">
-                        Metal
-                      </span>
-                      , my music taste is probably the most unpredictable thing
-                      in my life.
-                    </p>
-                  </div>
+              <div className="bg-white dark:bg-gray-800 text-[#003049] dark:text-white p-8 rounded-3xl shadow-2xl transition-colors duration-300">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="text-3xl">⚡</span>
+                  <h3 className="text-3xl font-bold">What I Do</h3>
+                </div>
+                <div className="space-y-4 text-lg leading-relaxed">
+                  <p>
+                    I build end-to-end solutions: responsive UIs with React and
+                    TypeScript, RESTful APIs with Node.js and Spring Boot.
+                  </p>
+                  <p>
+                    Working in agile teams, mentoring junior devs, doing code
+                    reviews, and making sure everything from concept to
+                    deployment runs smoothly.
+                  </p>
                 </div>
               </div>
             </div>
@@ -214,31 +180,22 @@ const AboutSection = () => {
               }`}
               style={{ transitionDelay: "1000ms" }}
             >
-              <div className="bg-gradient-to-br from-[#669BBC] to-[#669BBC]/90 text-[#FDF0D5] p-8 rounded-3xl shadow-2xl border border-[#003049]/20 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-36 h-36 bg-[#FDF0D5]/5 rounded-full -translate-y-18 -translate-x-18"></div>
-                <div className="absolute bottom-0 right-0 w-28 h-28 bg-[#C1121F]/10 rounded-full translate-y-14 translate-x-14"></div>
-
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl">💭</span>
-                    <h3 className="text-3xl font-bold text-[#003049]">
-                      Why This Page?
-                    </h3>
-                  </div>
-                  <div className="space-y-4 text-lg leading-relaxed">
-                    <p>
-                      This site came to life when I had a bunch of personal
-                      projects running locally on my Linux machine and thought:
-                    </p>
-                    <blockquote className="border-l-4 border-[#FDF0D5]/50 pl-4 italic font-medium text-[#FDF0D5]/90">
-                      "Why not put them online and access them from anywhere?"
-                    </blockquote>
-                    <p>
-                      So here we are, a little landing page for my new domain,
-                      born from one of those nerdy ideas I mentioned above.
-                      Welcome to my digital playground!
-                    </p>
-                  </div>
+              <div className="bg-[#669BBC] dark:bg-gray-800 text-white p-8 rounded-3xl shadow-2xl transition-colors duration-300">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="text-3xl">🚀</span>
+                  <h3 className="text-3xl font-bold">Beyond Work</h3>
+                </div>
+                <div className="space-y-4 text-lg leading-relaxed">
+                  <p>
+                    I run a homelab at home where I self-host a lot of solutions
+                    from Jellyfin and Nextcloud to monitoring dashboards with
+                    Grafana. All containerized with Docker and Portainer.
+                  </p>
+                  <p>
+                    Got tired of subscription fees and wanted more control over
+                    my data. Built a homelab to solve both, deep diving into
+                    some open-source and self-hosted solutions.
+                  </p>
                 </div>
               </div>
             </div>

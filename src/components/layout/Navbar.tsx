@@ -26,6 +26,13 @@ const Navbar = () => {
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C1121F] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
           </a>
           <a
+            href="#experience"
+            className="text-[#003049]/80 dark:text-white dark:text-white/80 font-medium hover:text-[#003049] dark:hover:text-white dark:text-white transition-colors relative group"
+          >
+            Experience
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C1121F] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+          </a>
+          <a
             href="#highlights"
             className="text-[#003049]/80 dark:text-white dark:text-white/80 font-medium hover:text-[#003049] dark:hover:text-white dark:text-white transition-colors relative group"
           >

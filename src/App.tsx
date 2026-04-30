@@ -7,6 +7,7 @@ import HeroSection from "./components/home/HeroSection";
 import AboutSection from "./components/about/AboutSection";
 import SkillsSection from "./components/skills/SkillsSection";
 import HighlightsSection from "./components/highlights/HighlightsSection";
+import ExperienceSection from "./components/experience/ExperienceSection";
 import SectionDivider from "./components/ui/SectionDivider";
 import ContactSection from "./components/contact/ContactSection";
 import Footer from "./components/layout/Footer";
@@ -20,6 +21,8 @@ function HomePage() {
       <HeroSection />
       <SectionDivider />
       <AboutSection />
+      <SectionDivider />
+      <ExperienceSection />
       <SectionDivider />
       <HighlightsSection />
       <SectionDivider />

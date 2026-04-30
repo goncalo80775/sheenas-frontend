@@ -52,7 +52,7 @@ const HeroSection = () => {
               }`}
               style={{ transitionDelay: "600ms" }}
             >
-              Full Stack Engineer & DIY Tech Explorer
+              Full Stack Engineer & Self-Hosted Infrastructure Enthusiast
             </p>
 
             <div

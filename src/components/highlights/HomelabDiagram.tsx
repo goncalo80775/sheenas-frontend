@@ -2,7 +2,7 @@
 
 const HomelabDiagram: React.FC = () => {
   return (
-      <><div className="grid grid-cols-1 xl:grid-cols-[240px_1fr_280px] gap-4">
+      <><div className="grid grid-cols-1 lg:grid-cols-[240px_1fr_280px] gap-4">
           <div className="flex flex-col gap-2.5">
               <div className="border border-slate-200 dark:border-slate-800 rounded-lg bg-slate-50 dark:bg-slate-900 overflow-hidden">
                   <div className="flex items-center gap-2 p-2 border-b border-slate-200 dark:border-slate-800 text-xs font-bold uppercase tracking-wider">
@@ -107,7 +107,7 @@ const HomelabDiagram: React.FC = () => {
                       </div>
                   </div>
                   <div className="p-3 flex flex-col gap-2.5">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2">
+                      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
                           <div className="border border-[rgba(249,115,22,0.3)] rounded-md bg-slate-50 dark:bg-slate-900 overflow-hidden">
                               <div className="p-2 text-xs font-bold uppercase tracking-wider border-b border-slate-200 dark:border-slate-800 bg-[rgba(249,115,22,0.08)] text-[#f97316] flex items-center gap-2">
                                   <span>▶</span> Media Acquisition

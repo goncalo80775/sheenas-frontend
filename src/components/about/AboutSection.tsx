@@ -9,11 +9,11 @@ const AboutSection = () => {
   }, []);
 
   const personalityTags = [
-    { text: "Full-Stack Developer", icon: "💻" },
-    { text: "Music Festival Lover", icon: "🎵" },
-    { text: "Problem Solver", icon: "🧩" },
-    { text: "Tech Enthusiast", icon: "⚡" },
-    { text: "Gamer", icon: "🎮" },
+    "Full-Stack Developer",
+    "Music Festival Lover",
+    "Problem Solver",
+    "Tech Enthusiast",
+    "Gamer",
   ];
 
   return (
@@ -37,9 +37,9 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
           {/* Left Side - Profile Card */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4 flex flex-col items-center gap-8">
             <div
               className={`transform transition-all duration-1000 ${
                 isVisible
@@ -48,117 +48,87 @@ const AboutSection = () => {
               }`}
               style={{ transitionDelay: "200ms" }}
             >
-              <div>
-                <div className="relative mb-8">
-                  <div className="w-64 h-80 mx-auto bg-[#003049] dark:bg-gray-800 rounded-2xl overflow-hidden relative shadow-xl">
-                    <img
-                      src="/assets/personal.jpg"
-                      alt="Gonçalo Martins"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                {/* Personality Tags */}
-                <div className="space-y-3">
-                  {personalityTags.map((tag, index) => (
-                    <div
-                      key={index}
-                      className={`transform transition-all duration-700 ${
-                        isVisible
-                          ? "translate-x-0 opacity-100"
-                          : "translate-x-8 opacity-0"
-                      }`}
-                      style={{ transitionDelay: `${index * 100 + 400}ms` }}
-                    >
-                      <div
-                        className={`${
-                          index % 2 === 0 ? "bg-[#003049]" : "bg-[#669BBC]"
-                        } text-white px-4 py-3 rounded-xl font-semibold text-sm shadow-lg transform hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-default flex items-center gap-3`}
-                      >
-                        <span className="text-lg">{tag.icon}</span>
-                        {tag.text}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Resume Button */}
-                <div
-                  className={`mt-6 transform transition-all duration-700 ${
-                    isVisible
-                      ? "translate-y-0 opacity-100"
-                      : "translate-y-10 opacity-0"
-                  }`}
-                  style={{
-                    transitionDelay: `${personalityTags.length * 100 + 300}ms`,
-                  }}
-                >
-                  <a
-                    href="/resume"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-[#003049] dark:bg-[#669BBC] text-white px-6 py-4 rounded-2xl font-semibold text-center shadow-lg border-4 border-[#003049] dark:border-[#669BBC] transform hover:scale-105 hover:bg-[#C1121F] dark:hover:bg-[#C1121F] hover:border-[#C1121F] hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3"
-                  >
-                    <svg
-                      className="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    View My Resume
-                  </a>
-                </div>
+              <div className="w-64 h-80 bg-[#003049] dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src="/assets/personal.jpg"
+                  alt="Gonçalo Martins"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
-          </div>
 
-          {/* Right Side - Content Cards */}
-          <div className="lg:col-span-7 space-y-6">
+            {/* Personality Tags */}
             <div
-              className={`transform transition-all duration-1000 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-12 opacity-0"
+              className={`flex flex-wrap gap-2 justify-center transform transition-all duration-700 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
+              style={{ transitionDelay: "400ms" }}
+            >
+              {personalityTags.map((tag, index) => (
+                <span
+                  key={index}
+                  className={`px-3 py-1.5 rounded-full text-sm font-medium tracking-wide ${
+                    index % 2 === 0
+                      ? "bg-[#003049] text-white"
+                      : "bg-[#669BBC]/20 text-[#003049] dark:text-[#669BBC] border border-[#669BBC]"
+                  }`}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Resume Button */}
+            <div
+              className={`w-full transform transition-all duration-700 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
               style={{ transitionDelay: "600ms" }}
             >
-              <div className="bg-[#003049] dark:bg-gray-800 text-white p-8 rounded-3xl shadow-2xl">
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="text-3xl">💼</span>
-                  <h3 className="text-3xl font-bold text-[#C1121F]">
-                    Professional Background
-                  </h3>
-                </div>
-                <div className="space-y-4 text-lg leading-relaxed">
-                  <p>
-                    Full-Stack Developer with 4+ years building scalable web
-                    applications. I work with React, TypeScript, Node.js, and
-                    Java Spring Boot on a daily basis.
-                  </p>
-                </div>
+              <a
+                href="/resume"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-[#003049] dark:bg-[#669BBC] text-white px-6 py-3 rounded-xl font-semibold text-center shadow-md hover:bg-[#C1121F] dark:hover:bg-[#C1121F] hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-widest"
+              >
+                View Resume
+              </a>
+            </div>
+          </div>
+
+          {/* Right Side - Content */}
+          <div className="lg:col-span-8 space-y-6">
+            {/* Professional Background */}
+            <div
+              className={`transform transition-all duration-1000 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+              }`}
+              style={{ transitionDelay: "500ms" }}
+            >
+              <div className="bg-[#003049] dark:bg-gray-800 text-white p-8 rounded-2xl shadow-xl">
+                <h3 className="text-xl font-bold text-[#C1121F] uppercase tracking-widest mb-4">
+                  Professional Background
+                </h3>
+                <p className="text-lg leading-relaxed text-white/90">
+                  Full-Stack Developer with 4+ years building scalable web
+                  applications. I work with React, TypeScript, Node.js, and
+                  Java Spring Boot on a daily basis.
+                </p>
               </div>
             </div>
 
+            {/* What I Do */}
             <div
               className={`transform transition-all duration-1000 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-12 opacity-0"
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
               }`}
-              style={{ transitionDelay: "800ms" }}
+              style={{ transitionDelay: "700ms" }}
             >
-              <div className="bg-white dark:bg-gray-800 text-[#003049] dark:text-white p-8 rounded-3xl shadow-2xl transition-colors duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="text-3xl">⚡</span>
-                  <h3 className="text-3xl font-bold">What I Do</h3>
-                </div>
-                <div className="space-y-4 text-lg leading-relaxed">
+              <div className="border-l-4 border-[#669BBC] bg-[#669BBC]/10 dark:bg-gray-800 p-8 rounded-2xl shadow-md">
+                <h3 className="text-xl font-bold text-[#003049] dark:text-white uppercase tracking-widest mb-4">
+                  What I Do
+                </h3>
+                <div className="space-y-3 text-lg leading-relaxed text-[#003049]/80 dark:text-gray-300">
                   <p>
                     I build end-to-end solutions: responsive UIs with React and
                     TypeScript, RESTful APIs with Node.js and Spring Boot.
@@ -172,20 +142,18 @@ const AboutSection = () => {
               </div>
             </div>
 
+            {/* Beyond Work */}
             <div
               className={`transform transition-all duration-1000 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-12 opacity-0"
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
               }`}
-              style={{ transitionDelay: "1000ms" }}
+              style={{ transitionDelay: "900ms" }}
             >
-              <div className="bg-[#669BBC] dark:bg-gray-800 text-white p-8 rounded-3xl shadow-2xl transition-colors duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="text-3xl">🚀</span>
-                  <h3 className="text-3xl font-bold">Beyond Work</h3>
-                </div>
-                <div className="space-y-4 text-lg leading-relaxed">
+              <div className="border-l-4 border-[#C1121F] bg-[#C1121F]/5 dark:bg-gray-800 p-8 rounded-2xl shadow-md">
+                <h3 className="text-xl font-bold text-[#003049] dark:text-white uppercase tracking-widest mb-4">
+                  Beyond Work
+                </h3>
+                <div className="space-y-3 text-lg leading-relaxed text-[#003049]/80 dark:text-gray-300">
                   <p>
                     I run a homelab at home where I self-host a lot of solutions
                     from Jellyfin and Nextcloud to monitoring dashboards with

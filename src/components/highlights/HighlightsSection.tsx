@@ -1,20 +1,28 @@
 import { useState, useEffect } from "react";
 import HomelabDiagram from "./HomelabDiagram";
 
+interface Tab {
+  label: string;
+  imageUrl: string;
+  imageFit?: string;
+}
+
 interface HighlightItem {
   title: string;
   subtitle: string;
   icon: string;
-  type: "video" | "image" | "component";
+  type: "video" | "image" | "component" | "tabs";
   videoUrl?: string;
   imageUrl?: string;
   imageFit?: string;
   component?: React.ReactNode;
+  tabs?: Tab[];
   bgColor: string;
 }
 
 const HighlightsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [activeToolTab, setActiveToolTab] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,31 +64,16 @@ const HighlightsSection = () => {
       bgColor: "bg-[#003049]",
     },
     {
-      title: "Container Management",
-      subtitle: "Managing services with Portainer",
-      icon: "🐳",
-      type: "image",
-      imageUrl: "/assets/portainer-dashboard.png",
-      imageFit: "cover",
+      title: "Homelab in Action",
+      subtitle: "Container management with Portainer, load testing with Artillery, and server monitoring via Grafana",
+      icon: "🔧",
+      type: "tabs",
+      tabs: [
+        { label: "Server Monitoring", imageUrl: "/assets/server-monitoring.png", imageFit: "contain" },
+        { label: "App Testing", imageUrl: "/assets/artillery-grafana.png", imageFit: "contain" },
+        { label: "Container Management", imageUrl: "/assets/portainer-dashboard.png", imageFit: "cover" },
+      ],
       bgColor: "bg-[#669BBC]",
-    },
-    {
-      title: "App Testing",
-      subtitle: "Performance testing with Artillery",
-      icon: "📊",
-      type: "image",
-      imageUrl: "/assets/artillery-grafana.png",
-      imageFit: "contain",
-      bgColor: "bg-[#669BBC]",
-    },
-    {
-      title: "Server Monitoring",
-      subtitle: "Real-time infrastructure metrics of my homelab",
-      icon: "📈",
-      type: "image",
-      imageUrl: "/assets/server-monitoring.png",
-      imageFit: "contain",
-      bgColor: "bg-[#003049]",
     },
   ];
 
@@ -146,8 +139,36 @@ const HighlightsSection = () => {
                         ></iframe>
                       </div>
                     ) : item.type === "component" ? (
-                      <div className="bg-white dark:bg-[#003049] p-4">
+                      <div className="bg-white dark:bg-[#003049] p-4 overflow-auto">
                         {item.component}
+                      </div>
+                    ) : item.type === "tabs" ? (
+                      <div className="flex flex-col gap-4">
+                        <div className="flex flex-wrap gap-2">
+                          {item.tabs!.map((tab, tabIndex) => (
+                            <button
+                              key={tabIndex}
+                              onClick={() => setActiveToolTab(tabIndex)}
+                              className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                                activeToolTab === tabIndex
+                                  ? "bg-white text-[#003049]"
+                                  : "bg-white/20 text-white hover:bg-white/30"
+                              }`}
+                            >
+                              {tab.label}
+                            </button>
+                          ))}
+                        </div>
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-black/20">
+                          <img
+                            src={item.tabs![activeToolTab].imageUrl}
+                            alt={item.tabs![activeToolTab].label}
+                            className={`absolute inset-0 w-full h-full ${
+                              item.tabs![activeToolTab].imageFit === "cover" ? "object-cover" : "object-contain"
+                            }`}
+                            loading="lazy"
+                          />
+                        </div>
                       </div>
                     ) : (
                       <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-black/20">

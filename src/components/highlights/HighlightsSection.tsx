@@ -78,9 +78,9 @@ const HighlightsSection = () => {
   ];
 
   return (
-    <section id="highlights" className="py-32 px-6 bg-white dark:bg-gray-900 transition-colors duration-300 min-h-screen flex items-center">
+    <section id="highlights" className="py-16 md:py-32 px-4 md:px-6 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-[1600px] mx-auto w-full">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 md:mb-20">
           <div
             className={`transform transition-all duration-1000 ${
               isVisible
@@ -88,7 +88,7 @@ const HighlightsSection = () => {
                 : "translate-y-8 opacity-0"
             }`}
           >
-            <h2 className="text-6xl md:text-7xl font-black text-[#003049] dark:text-white mb-6 relative">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-[#003049] dark:text-white mb-6 relative">
               <span className="text-[#C1121F]">High</span>lights
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-[#C1121F] rounded-full"></div>
             </h2>
@@ -109,21 +109,20 @@ const HighlightsSection = () => {
               style={{ transitionDelay: `${index * 200 + 400}ms` }}
             >
               <div
-                className={`${item.bgColor} dark:opacity-90 p-10 rounded-3xl shadow-2xl ${
+                className={`${item.bgColor} dark:opacity-90 p-5 md:p-10 rounded-3xl shadow-2xl ${
                   item.bgColor.includes("white") ? "text-[#003049] dark:text-white" : "text-white"
-                } h-full flex flex-col min-h-[500px] transition-all duration-300`}
+                } h-full flex flex-col min-h-[300px] md:min-h-[500px] transition-all duration-300`}
               >
                 <div className="flex flex-col h-full">
-                  <div className="flex items-center gap-4 mb-6">
-                    <span className="text-5xl">{item.icon}</span>
-                    <h3 className="text-3xl lg:text-4xl font-bold leading-tight">
+                  <div className="flex items-center gap-3 mb-4">
+                    <h3 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight">
                       {item.title}
                     </h3>
                   </div>
 
                   <p className={`${
                     item.bgColor.includes("white") ? "text-slate-600" : "text-white/90"
-                  } text-base mb-8 leading-relaxed`}>
+                  } text-sm md:text-base mb-4 md:mb-8 leading-relaxed`}>
                     {item.subtitle}
                   </p>
 

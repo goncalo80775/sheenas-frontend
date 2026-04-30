@@ -22,7 +22,7 @@ const AboutSection = () => {
       className="py-20 px-6 bg-white dark:bg-gray-900 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <div
             className={`transform transition-all duration-1000 ${
               isVisible
@@ -30,16 +30,16 @@ const AboutSection = () => {
                 : "translate-y-8 opacity-0"
             }`}
           >
-            <h2 className="text-5xl md:text-6xl font-black text-[#003049] dark:text-white mb-4 relative">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#003049] dark:text-white mb-4 relative">
               <span className="text-[#C1121F]">About</span> Me
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#C1121F] rounded-full"></div>
             </h2>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-10 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 md:gap-10 items-start">
           {/* Left Side - Profile Card */}
-          <div className="lg:col-span-4 flex flex-col items-center gap-8">
+          <div className="lg:col-span-4 flex flex-col items-center gap-6">
             <div
               className={`transform transition-all duration-1000 ${
                 isVisible

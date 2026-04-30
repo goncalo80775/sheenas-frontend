@@ -106,21 +106,21 @@ const HomelabDiagram: React.FC = () => {
                           </div>
                       </div>
                   </div>
-                  <div className="p-3 flex flex-col gap-2.5">
+                  <div className="p-3">
                       <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
                           <div className="border border-[rgba(249,115,22,0.3)] rounded-md bg-slate-50 dark:bg-slate-900 overflow-hidden">
                               <div className="p-2 text-xs font-bold uppercase tracking-wider border-b border-slate-200 dark:border-slate-800 bg-[rgba(249,115,22,0.08)] text-[#f97316] flex items-center gap-2">
                                   <span>▶</span> Media Acquisition
                               </div>
                               <div className="p-2 space-y-1">
-                                  <div className="flex items-center gap-2 text-xs"><span className="text-red-400">🔒</span><span className="font-semibold text-red-300">gluetun</span><span className="ml-auto text-slate-500 dark:text-slate-300">VPN gateway</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>⬇️</span><span className="font-semibold text-slate-900 dark:text-white">qbittorrent</span><span className="ml-auto text-slate-500 dark:text-slate-300">via VPN</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>📺</span><span className="font-semibold text-slate-900 dark:text-white">sonarr</span><span className="ml-auto text-slate-500 dark:text-slate-300">TV shows</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🎬</span><span className="font-semibold text-slate-900 dark:text-white">radarr</span><span className="ml-auto text-slate-500 dark:text-slate-300">movies</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🎵</span><span className="font-semibold text-slate-900 dark:text-white">lidarr</span><span className="ml-auto text-slate-500 dark:text-slate-300">music</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>💬</span><span className="font-semibold text-slate-900 dark:text-white">bazarr</span><span className="ml-auto text-slate-500 dark:text-slate-300">subtitles</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🔍</span><span className="font-semibold text-slate-900 dark:text-white">prowlarr</span><span className="ml-auto text-slate-500 dark:text-slate-300">indexer</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>☁️</span><span className="font-semibold text-slate-900 dark:text-white">flaresolverr</span><span className="ml-auto text-slate-500 dark:text-slate-300">cf bypass</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span className="text-red-400">🔒</span><span className="font-semibold text-red-300">gluetun</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">VPN gateway</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>⬇️</span><span className="font-semibold text-slate-900 dark:text-white">qbittorrent</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">via VPN</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>📺</span><span className="font-semibold text-slate-900 dark:text-white">sonarr</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">TV shows</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🎬</span><span className="font-semibold text-slate-900 dark:text-white">radarr</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">movies</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🎵</span><span className="font-semibold text-slate-900 dark:text-white">lidarr</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">music</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>💬</span><span className="font-semibold text-slate-900 dark:text-white">bazarr</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">subtitles</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🔍</span><span className="font-semibold text-slate-900 dark:text-white">prowlarr</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">indexer</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>☁️</span><span className="font-semibold text-slate-900 dark:text-white">flaresolverr</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">cf bypass</span></div>
                               </div>
                           </div>
 
@@ -129,11 +129,11 @@ const HomelabDiagram: React.FC = () => {
                                   <span>🎞</span> Media Server / Music
                               </div>
                               <div className="p-2 space-y-1">
-                                  <div className="flex items-center gap-2 text-xs"><span>🎞️</span><span className="font-semibold text-[#7dd3fc]">jellyfin</span><span className="ml-auto text-slate-500 dark:text-slate-300">streaming</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🎶</span><span className="font-semibold text-slate-900 dark:text-white">navidrome</span><span className="ml-auto text-slate-500 dark:text-slate-300">music</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🔄</span><span className="font-semibold text-slate-900 dark:text-white">slskd</span><span className="ml-auto text-slate-500 dark:text-slate-300">soulseek</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🎯</span><span className="font-semibold text-slate-900 dark:text-white">soularr</span><span className="ml-auto text-slate-500 dark:text-slate-300">automation</span></div>
-                                  <div className="border-t border-slate-200 dark:border-slate-800 pt-2 text-slate-500 dark:text-slate-300 text-[0.75rem] leading-relaxed">
+                                  <div className="flex items-center gap-2 text-xs"><span>🎞️</span><span className="font-semibold text-[#7dd3fc]">jellyfin</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">streaming</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🎶</span><span className="font-semibold text-slate-900 dark:text-white">navidrome</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">music</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🔄</span><span className="font-semibold text-slate-900 dark:text-white">slskd</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">soulseek</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🎯</span><span className="font-semibold text-slate-900 dark:text-white">soularr</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">automation</span></div>
+                                  <div className="hidden lg:block border-t border-slate-200 dark:border-slate-800 pt-2 text-slate-500 dark:text-slate-300 text-[0.75rem] leading-relaxed">
                                       Jellyfin bridged across<br />two Docker networks.<br />Site B streams via Tailscale.
                                   </div>
                               </div>
@@ -144,11 +144,11 @@ const HomelabDiagram: React.FC = () => {
                                   <span>🏠</span> Home Automation
                               </div>
                               <div className="p-2 space-y-1">
-                                  <div className="flex items-center gap-2 text-xs"><span>🏠</span><span className="font-semibold text-slate-900 dark:text-white">homeassistant</span><span className="ml-auto text-slate-500 dark:text-slate-300">core</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>📨</span><span className="font-semibold text-slate-900 dark:text-white">mosquitto</span><span className="ml-auto text-slate-500 dark:text-slate-300">MQTT</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>❄️</span><span className="font-semibold text-slate-900 dark:text-white">hisense_ac</span><span className="ml-auto text-slate-500 dark:text-slate-300">AC bridge</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🗂️</span><span className="font-semibold text-slate-900 dark:text-white">homepage</span><span className="ml-auto text-slate-500 dark:text-slate-300">dashboard</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>📊</span><span className="font-semibold text-slate-900 dark:text-white">glances</span><span className="ml-auto text-slate-500 dark:text-slate-300">system</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🏠</span><span className="font-semibold text-slate-900 dark:text-white">homeassistant</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">core</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>📨</span><span className="font-semibold text-slate-900 dark:text-white">mosquitto</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">MQTT</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>❄️</span><span className="font-semibold text-slate-900 dark:text-white">hisense_ac</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">AC bridge</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🗂️</span><span className="font-semibold text-slate-900 dark:text-white">homepage</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">dashboard</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>📊</span><span className="font-semibold text-slate-900 dark:text-white">glances</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">system</span></div>
                               </div>
                           </div>
 
@@ -157,12 +157,12 @@ const HomelabDiagram: React.FC = () => {
                                   <span>📈</span> Observability
                               </div>
                               <div className="p-2 space-y-1">
-                                  <div className="flex items-center gap-2 text-xs"><span>📈</span><span className="font-semibold text-slate-900 dark:text-white">grafana</span><span className="ml-auto text-slate-500 dark:text-slate-300">dashboards</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🔥</span><span className="font-semibold text-slate-900 dark:text-white">prometheus</span><span className="ml-auto text-slate-500 dark:text-slate-300">metrics</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🗃️</span><span className="font-semibold text-slate-900 dark:text-white">influxdb</span><span className="ml-auto text-slate-500 dark:text-slate-300">time-series</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>💻</span><span className="font-semibold text-slate-900 dark:text-white">node-exporter</span><span className="ml-auto text-slate-500 dark:text-slate-300">host</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>⚙️</span><span className="font-semibold text-slate-900 dark:text-white">process-exp.</span><span className="ml-auto text-slate-500 dark:text-slate-300">procs</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🎯</span><span className="font-semibold text-slate-900 dark:text-white">artillery</span><span className="ml-auto text-slate-500 dark:text-slate-300">load tests</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>📈</span><span className="font-semibold text-slate-900 dark:text-white">grafana</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">dashboards</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🔥</span><span className="font-semibold text-slate-900 dark:text-white">prometheus</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">metrics</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🗃️</span><span className="font-semibold text-slate-900 dark:text-white">influxdb</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">time-series</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>💻</span><span className="font-semibold text-slate-900 dark:text-white">node-exporter</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">host</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>⚙️</span><span className="font-semibold text-slate-900 dark:text-white">process-exp.</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">procs</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🎯</span><span className="font-semibold text-slate-900 dark:text-white">artillery</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">load tests</span></div>
                               </div>
                           </div>
 
@@ -171,11 +171,11 @@ const HomelabDiagram: React.FC = () => {
                                   <span>☁️</span> Cloud / Files
                               </div>
                               <div className="p-2 space-y-1">
-                                  <div className="flex items-center gap-2 text-xs"><span>🖼️</span><span className="font-semibold text-slate-900 dark:text-white">immich</span><span className="ml-auto text-slate-500 dark:text-slate-300">photos</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🤖</span><span className="font-semibold text-slate-900 dark:text-white">immich_ml</span><span className="ml-auto text-slate-500 dark:text-slate-300">face/obj AI</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🐘</span><span className="font-semibold text-slate-900 dark:text-white">immich_pg</span><span className="ml-auto text-slate-500 dark:text-slate-300">database</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>☁️</span><span className="font-semibold text-slate-900 dark:text-white">nextcloud</span><span className="ml-auto text-slate-500 dark:text-slate-300">files/sync</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🐬</span><span className="font-semibold text-slate-900 dark:text-white">nextcloud_db</span><span className="ml-auto text-slate-500 dark:text-slate-300">database</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🖼️</span><span className="font-semibold text-slate-900 dark:text-white">immich</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">photos</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🤖</span><span className="font-semibold text-slate-900 dark:text-white">immich_ml</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">face/obj AI</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🐘</span><span className="font-semibold text-slate-900 dark:text-white">immich_pg</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">database</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>☁️</span><span className="font-semibold text-slate-900 dark:text-white">nextcloud</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">files/sync</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🐬</span><span className="font-semibold text-slate-900 dark:text-white">nextcloud_db</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">database</span></div>
                               </div>
                           </div>
 
@@ -184,11 +184,11 @@ const HomelabDiagram: React.FC = () => {
                                   <span>🔐</span> Security
                               </div>
                               <div className="p-2 space-y-1">
-                                  <div className="flex items-center gap-2 text-xs"><span>🛡️</span><span className="font-semibold text-slate-900 dark:text-white">adguard</span><span className="ml-auto text-slate-500 dark:text-slate-300">DNS / ads</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🗝️</span><span className="font-semibold text-slate-900 dark:text-white">vaultwarden</span><span className="ml-auto text-slate-500 dark:text-slate-300">passwords</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🔐</span><span className="font-semibold text-slate-900 dark:text-white">nginx-vw</span><span className="ml-auto text-slate-500 dark:text-slate-300">TLS proxy</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🖥️</span><span className="font-semibold text-slate-900 dark:text-white">rustdesk-hbbs</span><span className="ml-auto text-slate-500 dark:text-slate-300">relay</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🖥️</span><span className="font-semibold text-slate-900 dark:text-white">rustdesk-hbbr</span><span className="ml-auto text-slate-500 dark:text-slate-300">relay</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🛡️</span><span className="font-semibold text-slate-900 dark:text-white">adguard</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">DNS / ads</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🗝️</span><span className="font-semibold text-slate-900 dark:text-white">vaultwarden</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">passwords</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🔐</span><span className="font-semibold text-slate-900 dark:text-white">nginx-vw</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">TLS proxy</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🖥️</span><span className="font-semibold text-slate-900 dark:text-white">rustdesk-hbbs</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">relay</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🖥️</span><span className="font-semibold text-slate-900 dark:text-white">rustdesk-hbbr</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">relay</span></div>
                               </div>
                           </div>
 
@@ -197,10 +197,10 @@ const HomelabDiagram: React.FC = () => {
                                   <span>⚙️</span> Apps / Misc
                               </div>
                               <div className="p-2 space-y-1">
-                                  <div className="flex items-center gap-2 text-xs"><span>💰</span><span className="font-semibold text-slate-900 dark:text-white">firefly III</span><span className="ml-auto text-slate-500 dark:text-slate-300">finances</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>📥</span><span className="font-semibold text-slate-900 dark:text-white">firefly-imp.</span><span className="ml-auto text-slate-500 dark:text-slate-300">importer</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🧠</span><span className="font-semibold text-slate-900 dark:text-white">ollama</span><span className="ml-auto text-slate-500 dark:text-slate-300">local LLM</span></div>
-                                  <div className="flex items-center gap-2 text-xs"><span>🐳</span><span className="font-semibold text-slate-900 dark:text-white">portainer</span><span className="ml-auto text-slate-500 dark:text-slate-300">mgmt UI</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>💰</span><span className="font-semibold text-slate-900 dark:text-white">firefly III</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">finances</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>📥</span><span className="font-semibold text-slate-900 dark:text-white">firefly-imp.</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">importer</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🧠</span><span className="font-semibold text-slate-900 dark:text-white">ollama</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">local LLM</span></div>
+                                  <div className="flex items-center gap-2 text-xs"><span>🐳</span><span className="font-semibold text-slate-900 dark:text-white">portainer</span><span className="hidden lg:inline ml-auto text-slate-500 dark:text-slate-300">mgmt UI</span></div>
                               </div>
                           </div>
 
@@ -210,7 +210,7 @@ const HomelabDiagram: React.FC = () => {
                               </div>
                               <div className="p-2 space-y-2">
                                   <div className="flex items-center gap-2 text-xs"><span>⚛️</span><span className="font-semibold text-slate-900 dark:text-white">portfolio frontend</span></div>
-                                  <div className="text-slate-500 dark:text-slate-300 text-[0.75rem] leading-relaxed">
+                                  <div className="hidden lg:block text-slate-500 dark:text-slate-300 text-[0.75rem] leading-relaxed">
                                       React / Vite · self-hosted<br />
                                       Public via Cloudflare Tunnel<br />
                                       Isolated Docker network

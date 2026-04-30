@@ -1,4 +1,17 @@
 import { useState, useEffect } from "react";
+import HomelabDiagram from "./HomelabDiagram";
+
+interface HighlightItem {
+  title: string;
+  subtitle: string;
+  icon: string;
+  type: "video" | "image" | "component";
+  videoUrl?: string;
+  imageUrl?: string;
+  imageFit?: string;
+  component?: React.ReactNode;
+  bgColor: string;
+}
 
 const HighlightsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,14 +38,22 @@ const HighlightsSection = () => {
     };
   }, []);
 
-  const highlightItems = [
+  const highlightItems: HighlightItem[] = [
+    {
+      title: "Homelab Architecture",
+      subtitle: "Self-hosted infrastructure with Docker, Tailscale mesh, and multi-site setup",
+      icon: "🏠",
+      type: "component",
+      component: <HomelabDiagram />,
+      bgColor: "bg-white dark:bg-[#003049]",
+    },
     {
       title: "Master's degree mobile app",
       subtitle: "Mobile library solution built with React Native, Node.js, MySQL & MongoDB",
       icon: "📱",
       type: "video",
       videoUrl: "https://www.youtube.com/embed/-1N8xAC7CyI?start=113",
-      bgColor: "bg-[#C1121F]",
+      bgColor: "bg-[#003049]",
     },
     {
       title: "Container Management",
@@ -41,7 +62,7 @@ const HighlightsSection = () => {
       type: "image",
       imageUrl: "/assets/portainer-dashboard.png",
       imageFit: "cover",
-      bgColor: "bg-[#13CE66]",
+      bgColor: "bg-[#669BBC]",
     },
     {
       title: "App Testing",
@@ -86,6 +107,8 @@ const HighlightsSection = () => {
             <div
               key={index}
               className={`transform transition-all duration-1000 ${
+                index === 0 ? "lg:col-span-2" : ""
+              } ${
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-12 opacity-0"
@@ -93,7 +116,9 @@ const HighlightsSection = () => {
               style={{ transitionDelay: `${index * 200 + 400}ms` }}
             >
               <div
-                className={`${item.bgColor} dark:opacity-90 p-10 rounded-3xl shadow-2xl text-white h-full flex flex-col min-h-[500px] transition-all duration-300`}
+                className={`${item.bgColor} dark:opacity-90 p-10 rounded-3xl shadow-2xl ${
+                  item.bgColor.includes("white") ? "text-[#003049] dark:text-white" : "text-white"
+                } h-full flex flex-col min-h-[500px] transition-all duration-300`}
               >
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-4 mb-6">
@@ -103,7 +128,9 @@ const HighlightsSection = () => {
                     </h3>
                   </div>
 
-                  <p className="text-white/90 text-base mb-8 leading-relaxed">
+                  <p className={`${
+                    item.bgColor.includes("white") ? "text-slate-600" : "text-white/90"
+                  } text-base mb-8 leading-relaxed`}>
                     {item.subtitle}
                   </p>
 
@@ -117,6 +144,10 @@ const HighlightsSection = () => {
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
                         ></iframe>
+                      </div>
+                    ) : item.type === "component" ? (
+                      <div className="bg-white dark:bg-[#003049] p-4">
+                        {item.component}
                       </div>
                     ) : (
                       <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-black/20">
